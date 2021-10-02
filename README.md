@@ -1,1 +1,3 @@
-# web-pull
+check the issues and do your best...
+
+there is some programming problem among with web designing releted
