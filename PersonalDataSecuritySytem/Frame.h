@@ -1,27 +1,7 @@
 void loading();
-void gotoxy(int x, int y);
-void Text_Color(int clrr);
 void bracket_frame();
 void Box();
 
-void gotoxy(int x, int y)
-{
-    COORD coord;
-    coord.X = x;
-    coord.Y = y;
-    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
-}
-void Text_Color(int clrr)
-{
-    WORD wColor;
-    HANDLE hStdOut=GetStdHandle(STD_OUTPUT_HANDLE);
-    CONSOLE_SCREEN_BUFFER_INFO csbi;
-    if(GetConsoleScreenBufferInfo(hStdOut,&csbi))
-    {
-        wColor=(csbi.wAttributes & 0xF0)+(clrr & 0x0F);
-        SetConsoleTextAttribute(hStdOut,wColor);
-    }
-}
 void Change_Color(char clr[])
 {
 Wrong_Input:
