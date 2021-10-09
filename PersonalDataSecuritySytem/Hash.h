@@ -1,3 +1,4 @@
+
 int HexToDec(char hex[]);
 void dectohex(long long int num_decimal,char hex[]);
 long long int hash_function(char str[],int key);
@@ -55,7 +56,8 @@ void dectohex(long long int num_decimal,char hex[])
 
 int HexToDec(char hex[])
 {
-    int decimal,i=0,val,len;
+    long long int decimal,i=0,val,pwrr;
+    int len;
     decimal = 0;
     len = strlen(hex);
     len--;
@@ -77,7 +79,8 @@ int HexToDec(char hex[])
         {
             continue;
         }
-        decimal+=val*pow(16, len);
+        pwrr=poww(16,len);
+        decimal+=(val*pwrr);
         len--;
     }
     return decimal;
