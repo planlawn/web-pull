@@ -1,15 +1,4 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<time.h>
-#include<windows.h>
-#include<dir.h>
-#include<stdbool.h>
-#include<conio.h>
-#include<string.h>
-
-
-#define cls system("cls");
-
+#include "OS detect.h"
 /////////////////// File Reader Start ///////////////
 
 bool Reading(char data[],char br,FILE *f)
@@ -49,7 +38,7 @@ char Globalun[50],gp[50],prep[50],Current_Addr[100];
 
 int main()
 {
-SetConsoleTitle("Donkey");
+
 FILE *f;
 f=fopen("C://Donkey/check.txt","r");
 if(f==NULL)
